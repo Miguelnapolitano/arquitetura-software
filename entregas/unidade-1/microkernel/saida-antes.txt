@@ -1,0 +1,85 @@
+============================================================
+  SISTEMA DE FATURAMENTO MULTI-ESTADO
+  Demonstração — Estilo MicroKernel
+============================================================
+
+Registrando plugins...
+  [Registry] Plugin 'ICMS-SP' registrado em 'impostos'
+  [Registry] Plugin 'ISS-SP' registrado em 'impostos'
+  [Registry] Plugin 'ICMS-RJ' registrado em 'impostos'
+  [Registry] Plugin 'Frete-Padrão' registrado em 'frete'
+  [Registry] Plugin 'Notificação-Email' registrado em 'notificacao'
+
+Plugins ativos: {'impostos': ['ICMS-SP', 'ISS-SP', 'ICMS-RJ'], 'frete': ['Frete-Padrão'], 'notificacao': ['Notificação-Email']}
+
+────────────────────────────────────────────────────────────
+  FATURA #1001 — São Paulo
+────────────────────────────────────────────────────────────
+  Cliente: TechCorp Ltda (SP)
+  Itens:
+    • Notebook Dell: 2× R$5,000.00 = R$10,000.00 [eletronico]
+    • Suporte Técnico: 10× R$200.00 = R$2,000.00 [servico]
+  Valor bruto: R$12,000.00
+  [Email → financeiro@techcorp.com] Fatura #1001 emitida para TechCorp Ltda. Total: R$13,400.00
+
+  Resultado da emissão:
+    ICMS-SP: R$1,300.00
+    ISS-SP: R$100.00
+    Frete: R$0.00
+    ─────────────────────────────
+    TOTAL: R$13,400.00
+    Notificações: email:financeiro@techcorp.com
+
+────────────────────────────────────────────────────────────
+  FATURA #1002 — Rio de Janeiro
+────────────────────────────────────────────────────────────
+  Cliente: Distribuidora Rio (RJ)
+  Itens:
+    • Monitor 4K: 5× R$1,200.00 = R$6,000.00 [eletronico]
+    • Cadeira Ergonômica: 3× R$800.00 = R$2,400.00 [mobiliario]
+  Valor bruto: R$8,400.00
+  [Email → nf@distribrj.com] Fatura #1002 emitida para Distribuidora Rio. Total: R$10,080.00
+
+  Resultado da emissão:
+    ICMS-RJ: R$1,680.00
+    Frete: R$0.00
+    ─────────────────────────────
+    TOTAL: R$10,080.00
+    Notificações: email:nf@distribrj.com
+
+────────────────────────────────────────────────────────────
+  FATURA #1003 — SP (frete grátis acima de R$5k)
+────────────────────────────────────────────────────────────
+  Cliente: InfraCo SA (SP)
+  Itens:
+    • Servidor Dell PowerEdge: 3× R$25,000.00 = R$75,000.00 [eletronico]
+  Valor bruto: R$75,000.00
+  [Email → compras@infraco.com] Fatura #1003 emitida para InfraCo SA. Total: R$84,000.00
+
+  Resultado da emissão:
+    ICMS-SP: R$9,000.00
+    Frete: R$0.00
+    ─────────────────────────────
+    TOTAL: R$84,000.00
+    Notificações: email:compras@infraco.com
+
+────────────────────────────────────────────────────────────
+  EXTENSÃO: adicionando suporte a MG sem alterar o núcleo
+────────────────────────────────────────────────────────────
+  [Registry] Plugin 'ICMS-MG' registrado em 'impostos'
+
+────────────────────────────────────────────────────────────
+  FATURA #1004 — Minas Gerais (novo plugin)
+────────────────────────────────────────────────────────────
+  Cliente: Mineração BH (MG)
+  Itens:
+    • Equipamento Industrial: 1× R$45,000.00 = R$45,000.00 [industrial]
+  Valor bruto: R$45,000.00
+  [Email → nf@mineracaobh.com] Fatura #1004 emitida para Mineração BH. Total: R$53,100.00
+
+  Resultado da emissão:
+    ICMS-MG: R$8,100.00
+    Frete: R$0.00
+    ─────────────────────────────
+    TOTAL: R$53,100.00
+    Notificações: email:nf@mineracaobh.com

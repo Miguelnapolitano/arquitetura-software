@@ -1,0 +1,53 @@
+============================================================
+  SISTEMA DE AGENDAMENTO DE CLÍNICA MÉDICA
+  Demonstração — Estilo Arquitetural em Camadas
+============================================================
+
+────────────────────────────────────────────────────────────
+  1. Agendando consultas válidas
+────────────────────────────────────────────────────────────
+HTTP 201 CREATED → {'id': 1, 'medico': 'Dra. Ana Silva', 'paciente': 'Maria Santos', 'horario': '09:00–09:30', 'status': 'agendada'}
+HTTP 201 CREATED → {'id': 2, 'medico': 'Dra. Ana Silva', 'paciente': 'Carlos Oliveira', 'horario': '10:00–10:30', 'status': 'agendada'}
+HTTP 201 CREATED → {'id': 3, 'medico': 'Dr. João Costa', 'paciente': 'Lúcia Ferreira', 'horario': '14:00–14:20', 'status': 'agendada'}
+
+────────────────────────────────────────────────────────────
+  2. Tentando agendar com CONFLITO de horário (esperado: HTTP 409)
+────────────────────────────────────────────────────────────
+HTTP 409 CONFLICT → {'erro': 'Dr(a). Dra. Ana Silva já tem consulta das 09:00 às 09:30.'}
+
+────────────────────────────────────────────────────────────
+  3. Agenda do dia — Dra. Ana em 10/06/2025
+────────────────────────────────────────────────────────────
+HTTP 200 OK → [{'id': 1, 'paciente': 'Maria Santos', 'horario': '09:00–09:30', 'status': 'agendada'}, {'id': 2, 'paciente': 'Carlos Oliveira', 'horario': '10:00–10:30', 'status': 'agendada'}]
+
+────────────────────────────────────────────────────────────
+  4. Realizando a consulta #1
+────────────────────────────────────────────────────────────
+HTTP 200 OK → {'id': 1, 'status': 'realizada', 'observacoes': 'Paciente sem alterações. Retorno em 6 meses.'}
+
+────────────────────────────────────────────────────────────
+  5. Cancelando a consulta #2
+────────────────────────────────────────────────────────────
+HTTP 200 OK → {'id': 2, 'status': 'cancelada'}
+
+────────────────────────────────────────────────────────────
+  6. Tentando cancelar consulta já cancelada (esperado: HTTP 400)
+────────────────────────────────────────────────────────────
+HTTP 400 BAD REQUEST → {'erro': "Impossível cancelar consulta com status 'cancelada'."}
+
+────────────────────────────────────────────────────────────
+  7. Agenda após alterações
+────────────────────────────────────────────────────────────
+HTTP 200 OK → []
+
+────────────────────────────────────────────────────────────
+  8. Histórico da paciente Maria
+────────────────────────────────────────────────────────────
+HTTP 200 OK → [{'id': 1, 'medico': 'Dra. Ana Silva', 'horario': '09:00–09:30', 'status': 'realizada'}]
+
+────────────────────────────────────────────────────────────
+  9. OCP em ação — trocando implementação de repositório
+────────────────────────────────────────────────────────────
+   A camada de negócios (AgendamentoServico) não muda.
+   Em produção, InMemoria* seria substituído por Postgres*.
+   O contrato (ABC RepositorioConsulta) garante a troca sem impacto.
