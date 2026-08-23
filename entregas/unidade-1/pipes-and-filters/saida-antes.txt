@@ -1,0 +1,40 @@
+============================================================
+  PIPELINE DE TRIAGEM DE CURRÍCULOS
+  Demonstração — Estilo Pipes and Filters
+============================================================
+
+Vaga: Engenheiro(a) de Software Backend
+Requisitos: ≥3 anos | Orçamento: R$18,000
+Habilidades: Python, PostgreSQL, Docker, REST
+
+Processando 6 currículos...
+
+Pipeline: Pipeline(LeitorDeCurriculos → ValidadorDeCurriculo → NormalizadorDeCampos → FiltroPorExperienciaMinima → FiltroPorPretensaoSalarial → CalculadorDeScore → RelatorioDeTriagem)
+
+  [DESCARTADO] Currículo id=3: nome ausente
+  [REPROVADO] Bruno Rocha: 1 ano(s) < mínimo 3
+  [REPROVADO] Clara Mendes: pretensão R$22,000 > máximo R$18,000
+
+════════════════════════════════════════════════════════════
+  TRIAGEM CONCLUÍDA — 3 candidato(s) aprovado(s)
+════════════════════════════════════════════════════════════
+
+  1. Ana Lima
+     Score: ██████████ 100%
+     Habilidades compatíveis: docker, python, rest, postgresql
+     Experiência: 5 ano(s) | Pretensão: R$14,000
+     Cidade: São Paulo
+
+  2. Elena Souza
+     Score: ██████████ 100%
+     Habilidades compatíveis: docker, python, rest, postgresql
+     Experiência: 3 ano(s) | Pretensão: R$12,000
+     Cidade: Recife
+
+  3. Diego Faria
+     Score: ███████░░░ 75%
+     Habilidades compatíveis: python, rest, postgresql
+     Experiência: 6 ano(s) | Pretensão: R$16,000
+     Cidade: São Paulo
+
+  → 3 candidato(s) encaminhado(s) para entrevista.
