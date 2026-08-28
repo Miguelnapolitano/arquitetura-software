@@ -1,0 +1,7 @@
+HTTP/1.1 422 Unprocessable Entity
+date: Fri, 28 Aug 2026 20:34:30 GMT
+server: uvicorn
+content-length: 160
+content-type: application/json
+
+{"codigo":"dados_invalidos","mensagem":"A requisição não atende ao contrato.","detalhes":[{"campo":"body.cpf","mensagem":"Field required","tipo":"missing"}]}
