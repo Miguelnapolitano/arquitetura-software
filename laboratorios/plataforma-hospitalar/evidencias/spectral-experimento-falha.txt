@@ -1,0 +1,5 @@
+
+/home/miguel/arquitetura-software/laboratorios/plataforma-hospitalar/evidencias/openapi-experimento.yaml
+ 34:24  error  oas3-valid-media-example  "cpf" property must match pattern "^\d{11}$"  paths./elegibilidades.post.requestBody.content.application/json.examples.pedidoValido.value.cpf
+
+✖ 1 problem (1 error, 0 warnings, 0 infos, 0 hints)

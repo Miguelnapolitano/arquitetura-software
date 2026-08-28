@@ -1,0 +1,18 @@
+Contrato explícito (contratos/openapi.yaml) x contrato gerado (app.openapi())
+
+POST /elegibilidades
+  status documentados (openapi.yaml): ['202', '422']
+  status gerados       (app.openapi()): ['202', '422']
+  status gerados fora do documento  : nenhum
+  status do documento fora do gerado: nenhum
+
+GET /elegibilidades/{protocolo}
+  status documentados (openapi.yaml): ['200', '404']
+  status gerados       (app.openapi()): ['200', '404', '422']
+  status gerados fora do documento  : ['422']
+  status do documento fora do gerado: nenhum
+
+PedidoElegibilidade.required:
+  documento: ['codigo_operadora', 'cpf', 'matricula_plano']
+  gerado   : ['codigo_operadora', 'cpf', 'matricula_plano']
+  igual     : True
