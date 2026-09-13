@@ -1,0 +1,2 @@
+ Container infra-elegibilidade-1 Stopping 
+ Container infra-elegibilidade-1 Stopped 

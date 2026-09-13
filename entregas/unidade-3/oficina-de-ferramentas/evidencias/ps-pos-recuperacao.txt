@@ -1,0 +1,5 @@
+NAME                       IMAGE                    COMMAND                  SERVICE            CREATED              STATUS                        PORTS
+infra-db_elegibilidade-1   infra-db_elegibilidade   "docker-entrypoint.s…"   db_elegibilidade   About a minute ago   Up About a minute (healthy)   5432/tcp
+infra-db_exames-1          infra-db_exames          "docker-entrypoint.s…"   db_exames          About a minute ago   Up About a minute (healthy)   5432/tcp
+infra-elegibilidade-1      infra-elegibilidade      "python -m uvicorn h…"   elegibilidade      About a minute ago   Up About a minute (healthy)   0.0.0.0:18001->8000/tcp, [::]:18001->8000/tcp
+infra-exames-1             infra-exames             "python -m uvicorn h…"   exames             About a minute ago   Up About a minute (healthy)   0.0.0.0:18002->8000/tcp, [::]:18002->8000/tcp

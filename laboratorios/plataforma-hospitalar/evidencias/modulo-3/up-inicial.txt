@@ -1,0 +1,381 @@
+ Image infra-db_exames Building 
+ Image infra-elegibilidade Building 
+ Image infra-exames Building 
+ Image infra-db_elegibilidade Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 2.19kB done
+#1 DONE 0.0s
+
+#2 [elegibilidade internal] load build definition from Dockerfile
+#2 transferring dockerfile: 232B done
+#2 DONE 0.1s
+
+#3 [db_exames internal] load build definition from Dockerfile
+#3 transferring dockerfile: 128B done
+#3 DONE 0.1s
+
+#4 [db_elegibilidade internal] load metadata for docker.io/library/postgres:16-alpine
+#4 DONE 2.7s
+
+#5 [exames internal] load metadata for docker.io/library/python:3.12-slim
+#5 DONE 2.7s
+
+#6 [elegibilidade internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [db_elegibilidade internal] load build context
+#7 DONE 0.0s
+
+#8 [db_elegibilidade 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 ...
+
+#9 [exames internal] load build context
+#9 DONE 0.0s
+
+#8 [db_exames 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 resolve docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 ...
+
+#7 [db_exames internal] load build context
+#7 transferring context: 1.15kB 0.0s done
+#7 DONE 0.2s
+
+#8 [db_exames 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 resolve docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685 0.2s done
+#8 ...
+
+#9 [elegibilidade internal] load build context
+#9 transferring context: 93.60kB 0.0s done
+#9 DONE 0.1s
+
+#8 [db_exames 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 sha256:075f7ba66bc9b3ce7d6b8b635208ff61cd7cf1a67d71ec530eec5d7ae0cbe571 3.05kB / 3.05kB done
+#8 sha256:75f5a96988cdf694a215073c3e9c001b706b371e2f94df3967f2efdec2787f6b 9.07kB / 9.07kB done
+#8 sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685 10.30kB / 10.30kB done
+#8 sha256:55afa1ecc21d2bb5e5045f32dafee56272ffd89860bac26f6c32123439af26a4 0B / 3.85MB 1.3s
+#8 sha256:55afa1ecc21d2bb5e5045f32dafee56272ffd89860bac26f6c32123439af26a4 1.05MB / 3.85MB 1.5s
+#8 sha256:6a47e1b9b2546e928c77b694492e3df726859a4219d8eca0f2e729a93a4fe5b8 0B / 969B 1.5s
+#8 sha256:19a2a5ab27c1666d2cdce3d670d68426daddcdeb4499648b939523925ae54d47 0B / 900.25kB 1.5s
+#8 sha256:55afa1ecc21d2bb5e5045f32dafee56272ffd89860bac26f6c32123439af26a4 3.85MB / 3.85MB 1.5s done
+#8 sha256:6a47e1b9b2546e928c77b694492e3df726859a4219d8eca0f2e729a93a4fe5b8 969B / 969B 1.6s done
+#8 extracting sha256:55afa1ecc21d2bb5e5045f32dafee56272ffd89860bac26f6c32123439af26a4
+#8 sha256:5e81018bec01adc3e07f4b24c838cb749d9b69d003b3b695b15cb85112d278b2 0B / 172B 1.6s
+#8 sha256:be6f407f5414062be7528b85a4487fdaae45c7a7fb65ea10dd9bb47d4d35d295 0B / 116B 1.7s
+#8 sha256:19a2a5ab27c1666d2cdce3d670d68426daddcdeb4499648b939523925ae54d47 900.25kB / 900.25kB 1.7s done
+#8 extracting sha256:55afa1ecc21d2bb5e5045f32dafee56272ffd89860bac26f6c32123439af26a4 0.2s done
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 0B / 111.29MB 1.8s
+#8 sha256:5e81018bec01adc3e07f4b24c838cb749d9b69d003b3b695b15cb85112d278b2 172B / 172B 1.8s done
+#8 sha256:be6f407f5414062be7528b85a4487fdaae45c7a7fb65ea10dd9bb47d4d35d295 116B / 116B 1.9s done
+#8 extracting sha256:6a47e1b9b2546e928c77b694492e3df726859a4219d8eca0f2e729a93a4fe5b8 done
+#8 sha256:8225e2970a7f9bfb1668ae9f029656c885111f5f003d2430191edb21e645cd4e 0B / 9.67kB 1.9s
+#8 extracting sha256:19a2a5ab27c1666d2cdce3d670d68426daddcdeb4499648b939523925ae54d47
+#8 extracting sha256:19a2a5ab27c1666d2cdce3d670d68426daddcdeb4499648b939523925ae54d47 0.0s done
+#8 extracting sha256:5e81018bec01adc3e07f4b24c838cb749d9b69d003b3b695b15cb85112d278b2 done
+#8 sha256:48d0d8b0e1367d12c7dd8a158200fc75f027c2f9dbdb2ceb8c03c05be1fa320e 0B / 129B 2.0s
+#8 sha256:8225e2970a7f9bfb1668ae9f029656c885111f5f003d2430191edb21e645cd4e 9.67kB / 9.67kB 2.0s done
+#8 sha256:48d0d8b0e1367d12c7dd8a158200fc75f027c2f9dbdb2ceb8c03c05be1fa320e 129B / 129B 2.1s done
+#8 extracting sha256:be6f407f5414062be7528b85a4487fdaae45c7a7fb65ea10dd9bb47d4d35d295 done
+#8 sha256:27d0ba4f668a96dc27fea9613c004f65333ea801c9167a22608fe3cba3addc68 0B / 169B 2.1s
+#8 sha256:b053c4426c4a82490db4a3e528741c36e2bc8017df76768fa1a8da6c248f02e7 0B / 6.11kB 2.2s
+#8 sha256:27d0ba4f668a96dc27fea9613c004f65333ea801c9167a22608fe3cba3addc68 169B / 169B 2.2s done
+#8 sha256:b053c4426c4a82490db4a3e528741c36e2bc8017df76768fa1a8da6c248f02e7 6.11kB / 6.11kB 2.3s done
+#8 sha256:7f5de3d007ea9f97ec15035895530645872a535f345506bb17ad38efc413400e 0B / 185B 2.4s
+#8 sha256:b053c4426c4a82490db4a3e528741c36e2bc8017df76768fa1a8da6c248f02e7 6.11kB / 6.11kB 2.3s done
+#8 sha256:7f5de3d007ea9f97ec15035895530645872a535f345506bb17ad38efc413400e 185B / 185B 2.5s done
+#8 sha256:7f5de3d007ea9f97ec15035895530645872a535f345506bb17ad38efc413400e 185B / 185B 2.5s done
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 6.29MB / 111.29MB 82.9s
+#8 ...
+
+#10 [elegibilidade 1/6] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#10 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 0.2s done
+#10 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB 77.8s done
+#10 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#10 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 1.0s done
+#10 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 1.2s done
+#10 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 1.3s done
+#10 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#10 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 1.3s done
+#10 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 2.6s done
+#10 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 79.2s done
+#10 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 1.2s done
+#10 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done
+#10 DONE 5.9s
+
+#8 [db_exames 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 ...
+
+#11 [elegibilidade 2/6] WORKDIR /app
+#11 DONE 0.2s
+
+#8 [db_exames 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 ...
+
+#12 [elegibilidade 3/6] COPY pyproject.toml README.md ./
+#12 DONE 0.1s
+
+#13 [exames 4/6] COPY src ./src
+#13 DONE 0.1s
+
+#8 [db_exames 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 12.58MB / 111.29MB 7.3s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 18.87MB / 111.29MB 8.9s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 18.87MB / 111.29MB 87.9s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 25.17MB / 111.29MB 12.6s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 32.51MB / 111.29MB 13.5s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 39.85MB / 111.29MB 14.0s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 46.14MB / 111.29MB 93.0s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 57.67MB / 111.29MB 14.5s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 67.11MB / 111.29MB 14.7s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 80.74MB / 111.29MB 15.0s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 91.23MB / 111.29MB 15.3s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 102.76MB / 111.29MB 15.6s
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 109.05MB / 111.29MB 16.0s
+#8 ...
+
+#14 [elegibilidade 5/6] RUN python -m pip install --no-cache-dir .
+#14 3.483 Processing /app
+#14 3.490   Installing build dependencies: started
+#14 5.211   Installing build dependencies: finished with status 'done'
+#14 5.213   Getting requirements to build wheel: started
+#14 5.545   Getting requirements to build wheel: finished with status 'done'
+#14 5.547   Preparing metadata (pyproject.toml): started
+#14 5.796   Preparing metadata (pyproject.toml): finished with status 'done'
+#14 6.454 Collecting fastapi (from plataforma-hospitalar==0.1.0)
+#14 6.861   Downloading fastapi-0.141.1-py3-none-any.whl.metadata (27 kB)
+#14 7.056 Collecting uvicorn (from plataforma-hospitalar==0.1.0)
+#14 7.190   Downloading uvicorn-0.52.4-py3-none-any.whl.metadata (6.6 kB)
+#14 7.559 Collecting pydantic (from plataforma-hospitalar==0.1.0)
+#14 7.683   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+#14 7.989 Collecting httpx (from plataforma-hospitalar==0.1.0)
+#14 86.94   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#14 8.268 Collecting psycopg[binary] (from plataforma-hospitalar==0.1.0)
+#14 8.399   Downloading psycopg-3.3.5-py3-none-any.whl.metadata (4.3 kB)
+#14 8.606 Collecting aio-pika (from plataforma-hospitalar==0.1.0)
+#14 8.744   Downloading aio_pika-10.0.1-py3-none-any.whl.metadata (15 kB)
+#14 8.898 Collecting opentelemetry-sdk (from plataforma-hospitalar==0.1.0)
+#14 9.030   Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl.metadata (1.6 kB)
+#14 9.173 Collecting opentelemetry-exporter-otlp-proto-http (from plataforma-hospitalar==0.1.0)
+#14 9.459   Downloading opentelemetry_exporter_otlp_proto_http-1.44.0-py3-none-any.whl.metadata (2.4 kB)
+#14 9.717 Collecting aiormq<8,>=7 (from aio-pika->plataforma-hospitalar==0.1.0)
+#14 9.857   Downloading aiormq-7.0.0-py3-none-any.whl.metadata (19 kB)
+#14 ...
+
+#8 [db_exames 1/2] FROM docker.io/library/postgres:16-alpine@sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 111.29MB / 111.29MB 17.4s done
+#8 extracting sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a
+#8 sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 111.29MB / 111.29MB 17.4s done
+#8 extracting sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 80.5s
+#8 extracting sha256:f0e7204f9584400d487e3d45cb430afd4cfb2e83bb70acbd34af2753d34d1f7a 3.7s done
+#8 extracting sha256:8225e2970a7f9bfb1668ae9f029656c885111f5f003d2430191edb21e645cd4e
+#8 extracting sha256:8225e2970a7f9bfb1668ae9f029656c885111f5f003d2430191edb21e645cd4e done
+#8 extracting sha256:48d0d8b0e1367d12c7dd8a158200fc75f027c2f9dbdb2ceb8c03c05be1fa320e done
+#8 extracting sha256:27d0ba4f668a96dc27fea9613c004f65333ea801c9167a22608fe3cba3addc68 done
+#8 extracting sha256:b053c4426c4a82490db4a3e528741c36e2bc8017df76768fa1a8da6c248f02e7
+#8 extracting sha256:b053c4426c4a82490db4a3e528741c36e2bc8017df76768fa1a8da6c248f02e7 done
+#8 extracting sha256:7f5de3d007ea9f97ec15035895530645872a535f345506bb17ad38efc413400e done
+#8 DONE 22.0s
+
+#15 [db_exames 2/2] COPY infra/postgres/init.sql /docker-entrypoint-initdb.d/init.sql
+#15 DONE 0.3s
+
+#16 [db_exames] exporting to image
+#16 exporting layers 0.0s done
+#16 writing image sha256:181866500e5b9fe550c9956a12c025b359ccb17e92d564bfe4b94b08e573ebf9 done
+#16 naming to docker.io/library/infra-db_exames 0.0s done
+#16 DONE 0.1s
+
+#17 [db_elegibilidade] exporting to image
+#17 exporting layers 0.0s done
+#17 writing image sha256:7ed298f3aa627671ece03ce7cc6fd224cac1838351b22b9abcaa5e3a622b6ec6 done
+#17 naming to docker.io/library/infra-db_elegibilidade 0.0s done
+#17 DONE 0.1s
+
+#14 [elegibilidade 5/6] RUN python -m pip install --no-cache-dir .
+#14 10.57 Collecting yarl (from aio-pika->plataforma-hospitalar==0.1.0)
+#14 10.72   Downloading yarl-1.24.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (103 kB)
+#14 10.89 Collecting starlette>=0.46.0 (from fastapi->plataforma-hospitalar==0.1.0)
+#14 11.02   Downloading starlette-1.6.0-py3-none-any.whl.metadata (6.4 kB)
+#14 11.16 Collecting typing-extensions>=4.8.0 (from fastapi->plataforma-hospitalar==0.1.0)
+#14 11.29   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#14 11.41 Collecting typing-inspection>=0.4.2 (from fastapi->plataforma-hospitalar==0.1.0)
+#14 11.54   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#14 11.67 Collecting annotated-doc>=0.0.2 (from fastapi->plataforma-hospitalar==0.1.0)
+#14 11.80   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#14 11.94 Collecting annotated-types>=0.6.0 (from pydantic->plataforma-hospitalar==0.1.0)
+#14 12.07   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#14 13.37 Collecting pydantic-core==2.46.5 (from pydantic->plataforma-hospitalar==0.1.0)
+#14 13.49   Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+#14 13.64 Collecting anyio (from httpx->plataforma-hospitalar==0.1.0)
+#14 13.76   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#14 13.90 Collecting certifi (from httpx->plataforma-hospitalar==0.1.0)
+#14 14.04   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+#14 14.18 Collecting httpcore==1.* (from httpx->plataforma-hospitalar==0.1.0)
+#14 14.30   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#14 14.45 Collecting idna (from httpx->plataforma-hospitalar==0.1.0)
+#14 14.57   Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+#14 14.70 Collecting h11>=0.16 (from httpcore==1.*->httpx->plataforma-hospitalar==0.1.0)
+#14 14.85   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#14 15.01 Collecting googleapis-common-protos~=1.52 (from opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 15.13   Downloading googleapis_common_protos-1.75.3-py3-none-any.whl.metadata (8.5 kB)
+#14 15.28 Collecting opentelemetry-api~=1.15 (from opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 15.42   Downloading opentelemetry_api-1.44.0-py3-none-any.whl.metadata (1.4 kB)
+#14 15.57 Collecting opentelemetry-exporter-otlp-proto-common==1.44.0 (from opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 15.70   Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl.metadata (1.8 kB)
+#14 15.84 Collecting opentelemetry-proto==1.44.0 (from opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 15.97   Downloading opentelemetry_proto-1.44.0-py3-none-any.whl.metadata (2.3 kB)
+#14 16.17 Collecting requests~=2.7 (from opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 16.30   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+#14 ...
+
+#18 [db_exames] resolving provenance for metadata file
+#18 DONE 0.0s
+
+#19 [db_elegibilidade] resolving provenance for metadata file
+#19 DONE 0.0s
+
+#14 [elegibilidade 5/6] RUN python -m pip install --no-cache-dir .
+#14 16.57 Collecting protobuf<8.0,>=5.0 (from opentelemetry-proto==1.44.0->opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 16.70   Downloading protobuf-7.36.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+#14 16.84 Collecting opentelemetry-semantic-conventions==0.65b0 (from opentelemetry-sdk->plataforma-hospitalar==0.1.0)
+#14 16.97   Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl.metadata (2.4 kB)
+#14 17.27 Collecting psycopg-binary==3.3.5 (from psycopg[binary]->plataforma-hospitalar==0.1.0)
+#14 17.54   Downloading psycopg_binary-3.3.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+#14 17.68 Collecting click>=7.0 (from uvicorn->plataforma-hospitalar==0.1.0)
+#14 17.80   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#14 17.94 Collecting pamqp<5,>=4 (from aiormq<8,>=7->aio-pika->plataforma-hospitalar==0.1.0)
+#14 96.90   Downloading pamqp-4.0.1-py3-none-any.whl.metadata (3.0 kB)
+#14 18.31 Collecting charset_normalizer<4,>=2 (from requests~=2.7->opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 18.43   Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+#14 18.59 Collecting urllib3<3,>=1.26 (from requests~=2.7->opentelemetry-exporter-otlp-proto-http->plataforma-hospitalar==0.1.0)
+#14 18.72   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+#14 19.06 Collecting multidict>=4.0 (from yarl->aio-pika->plataforma-hospitalar==0.1.0)
+#14 19.19   Downloading multidict-6.8.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#14 19.35 Collecting propcache>=0.2.1 (from yarl->aio-pika->plataforma-hospitalar==0.1.0)
+#14 19.47   Downloading propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+#14 19.61 Downloading aio_pika-10.0.1-py3-none-any.whl (56 kB)
+#14 19.75 Downloading fastapi-0.141.1-py3-none-any.whl (131 kB)
+#14 19.90 Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+#14 20.18 Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#14 20.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 9.9 MB/s eta 0:00:00
+#14 20.50 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#14 20.63 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#14 20.76 Downloading opentelemetry_exporter_otlp_proto_http-1.44.0-py3-none-any.whl (21 kB)
+#14 20.89 Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl (17 kB)
+#14 21.01 Downloading opentelemetry_proto-1.44.0-py3-none-any.whl (72 kB)
+#14 21.14 Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl (137 kB)
+#14 21.26 Downloading opentelemetry_api-1.44.0-py3-none-any.whl (60 kB)
+#14 21.39 Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl (204 kB)
+#14 21.52 Downloading psycopg_binary-3.3.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+#14 21.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 30.7 MB/s eta 0:00:00
+#14 21.81 Downloading uvicorn-0.52.4-py3-none-any.whl (79 kB)
+#14 21.94 Downloading aiormq-7.0.0-py3-none-any.whl (32 kB)
+#14 22.06 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#14 22.18 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#14 22.31 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#14 22.43 Downloading googleapis_common_protos-1.75.3-py3-none-any.whl (306 kB)
+#14 22.56 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#14 22.68 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+#14 22.81 Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+#14 22.93 Downloading idna-3.19-py3-none-any.whl (68 kB)
+#14 23.06 Downloading starlette-1.6.0-py3-none-any.whl (75 kB)
+#14 102.0 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#14 23.31 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#14 23.43 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#14 23.56 Downloading psycopg-3.3.5-py3-none-any.whl (213 kB)
+#14 23.69 Downloading yarl-1.24.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (109 kB)
+#14 23.82 Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (248 kB)
+#14 23.94 Downloading multidict-6.8.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (287 kB)
+#14 24.07 Downloading pamqp-4.0.1-py3-none-any.whl (32 kB)
+#14 24.19 Downloading propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (61 kB)
+#14 24.31 Downloading protobuf-7.36.1-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+#14 24.45 Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+#14 24.49 Building wheels for collected packages: plataforma-hospitalar
+#14 24.49   Building wheel for plataforma-hospitalar (pyproject.toml): started
+#14 24.74   Building wheel for plataforma-hospitalar (pyproject.toml): finished with status 'done'
+#14 24.74   Created wheel for plataforma-hospitalar: filename=plataforma_hospitalar-0.1.0-py3-none-any.whl size=13591 sha256=657f87a30bf517157a0df24012a91871502bc1536f200ac91ddafec3588ccd93
+#14 24.74   Stored in directory: /tmp/pip-ephem-wheel-cache-z4jx2nuu/wheels/54/1b/b7/aa63e25c8f14f4f2ae7b04e6097bdecb770e455c5c1ee0a600
+#14 24.74 Successfully built plataforma-hospitalar
+#14 24.81 Installing collected packages: urllib3, typing-extensions, psycopg-binary, protobuf, propcache, pamqp, multidict, idna, h11, click, charset_normalizer, certifi, annotated-types, annotated-doc, yarl, uvicorn, typing-inspection, requests, pydantic-core, psycopg, opentelemetry-proto, opentelemetry-api, httpcore, googleapis-common-protos, anyio, starlette, pydantic, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, httpx, aiormq, opentelemetry-sdk, fastapi, aio-pika, opentelemetry-exporter-otlp-proto-http, plataforma-hospitalar
+#14 27.16 Successfully installed aio-pika-10.0.1 aiormq-7.0.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 charset_normalizer-3.5.1 click-8.5.0 fastapi-0.141.1 googleapis-common-protos-1.75.3 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.19 multidict-6.8.0 opentelemetry-api-1.44.0 opentelemetry-exporter-otlp-proto-common-1.44.0 opentelemetry-exporter-otlp-proto-http-1.44.0 opentelemetry-proto-1.44.0 opentelemetry-sdk-1.44.0 opentelemetry-semantic-conventions-0.65b0 pamqp-4.0.1 plataforma-hospitalar-0.1.0 propcache-0.5.2 protobuf-7.36.1 psycopg-3.3.5 psycopg-binary-3.3.5 pydantic-2.13.5 pydantic-core-2.46.5 requests-2.34.2 starlette-1.6.0 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.7.0 uvicorn-0.52.4 yarl-1.24.5
+#14 27.16 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#14 27.31 
+#14 27.31 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+#14 27.31 [notice] To update, run: pip install --upgrade pip
+#14 DONE 27.6s
+
+#20 [exames 6/6] RUN useradd --create-home --uid 10001 app
+#20 DONE 0.4s
+
+#21 [elegibilidade] exporting to image
+#21 exporting layers
+#21 exporting layers 0.5s done
+#21 writing image sha256:4036a463869053ec3f1052ca602d31b81b712b6ba6dfe01bd45addf671b34e1e done
+#21 naming to docker.io/library/infra-elegibilidade 0.0s done
+#21 DONE 0.6s
+
+#22 [exames] exporting to image
+#22 exporting layers 0.5s done
+#22 writing image sha256:7631432a8aeeb670a3887e080536fca652208ec10d43b77c28d5f51b3d9d3b7b done
+#22 naming to docker.io/library/infra-exames 0.0s done
+#22 DONE 0.6s
+
+#23 [exames] resolving provenance for metadata file
+#23 DONE 0.0s
+
+#24 [elegibilidade] resolving provenance for metadata file
+#24 DONE 0.0s
+ Image infra-db_exames Built 
+ Image infra-exames Built 
+ Image infra-db_elegibilidade Built 
+ Image infra-elegibilidade Built 
+ Network infra_application-net Creating 
+ Volume infra_exames_data Creating 
+ Volume infra_exames_data Creating 
+ Network infra_exames-db-net Creating 
+ Network infra_application-net Creating 
+ Network infra_exames-db-net Creating 
+ Network infra_elegibilidade-db-net Creating 
+ Network infra_elegibilidade-db-net Creating 
+ Volume infra_elegibilidade_data Creating 
+ Volume infra_elegibilidade_data Creating 
+ Volume infra_exames_data Created 
+ Volume infra_exames_data Created 
+ Volume infra_elegibilidade_data Created 
+ Volume infra_elegibilidade_data Created 
+ Network infra_elegibilidade-db-net Created 
+ Network infra_elegibilidade-db-net Created 
+ Container infra-db_elegibilidade-1 Creating 
+ Network infra_application-net Created 
+ Network infra_application-net Created 
+ Network infra_exames-db-net Created 
+ Network infra_exames-db-net Created 
+ Container infra-db_exames-1 Creating 
+ Container infra-db_elegibilidade-1 Created 
+ Container infra-elegibilidade-1 Creating 
+ Container infra-db_exames-1 Created 
+ Container infra-elegibilidade-1 Created 
+ Container infra-exames-1 Creating 
+ Container infra-exames-1 Created 
+ Container infra-db_exames-1 Starting 
+ Container infra-db_elegibilidade-1 Starting 
+ Container infra-db_elegibilidade-1 Started 
+ Container infra-db_elegibilidade-1 Waiting 
+ Container infra-db_exames-1 Started 
+ Container infra-db_elegibilidade-1 Healthy 
+ Container infra-elegibilidade-1 Starting 
+ Container infra-elegibilidade-1 Started 
+ Container infra-db_exames-1 Waiting 
+ Container infra-elegibilidade-1 Waiting 
+ Container infra-db_exames-1 Healthy 
+ Container infra-elegibilidade-1 Healthy 
+ Container infra-exames-1 Starting 
+ Container infra-exames-1 Started 
+ Container infra-elegibilidade-1 Waiting 
+ Container infra-exames-1 Waiting 
+ Container infra-db_elegibilidade-1 Waiting 
+ Container infra-db_exames-1 Waiting 
+ Container infra-elegibilidade-1 Healthy 
+ Container infra-db_exames-1 Healthy 
+ Container infra-db_elegibilidade-1 Healthy 
+ Container infra-exames-1 Healthy 
