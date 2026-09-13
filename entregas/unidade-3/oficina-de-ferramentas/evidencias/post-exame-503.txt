@@ -1,0 +1,7 @@
+HTTP/1.1 503 Service Unavailable
+date: Sun, 13 Sep 2026 16:25:41 GMT
+server: uvicorn
+content-length: 48
+content-type: application/json
+
+{"detail":{"codigo":"dependencia_indisponivel"}}

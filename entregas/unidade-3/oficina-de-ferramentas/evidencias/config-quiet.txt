@@ -1,0 +1,3 @@
+=== docker compose config --quiet (exit 0) ===
+(sem texto; codigo zero = configuracao sintaticamente valida)
+exit=0
