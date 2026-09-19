@@ -1,0 +1,18 @@
+=== passo 0: consumidor declara a fila (fila vazia -> sem efeito) ===
+exit=0
+
+=== topologia declarada (management API) ===
+filas: ['billing.resultados.v1', 'billing.resultados.v1.dlq']
+exchange hospital.events: topic durable= True
+
+=== passo 1: publicar evento valido (entrega 1) ===
+Publicado: ResultadoLaboratorialDisponibilizado.v1 event_id=3fa85f64-5717-4562-b3fc-2c963f66afa6
+
+=== passo 2: consumir (1a entrega) ===
+ResultadoLaboratorialDisponibilizado.v1 event_id=3fa85f64-5717-4562-b3fc-2c963f66afa6 processed=True attempts=1
+
+=== passo 3: republicar MESMO event_id (redelivery sintetico) ===
+Publicado: ResultadoLaboratorialDisponibilizado.v1 event_id=3fa85f64-5717-4562-b3fc-2c963f66afa6
+
+=== passo 4: consumir (2a entrega) ===
+ResultadoLaboratorialDisponibilizado.v1 event_id=3fa85f64-5717-4562-b3fc-2c963f66afa6 processed=False attempts=2

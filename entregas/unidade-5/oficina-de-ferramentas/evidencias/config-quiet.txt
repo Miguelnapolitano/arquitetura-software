@@ -1,0 +1,42 @@
+=== docker compose -f infra/compose.eventos.yml config --quiet ===
+exit=0 (0 = configuracao valida sem texto de erro)
+
+=== docker compose -f infra/compose.eventos.yml config ===
+name: infra
+services:
+  rabbitmq:
+    environment:
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_USER: guest
+    healthcheck:
+      test:
+        - CMD
+        - rabbitmq-diagnostics
+        - -q
+        - ping
+      timeout: 3s
+      interval: 2s
+      retries: 20
+    image: rabbitmq:4-management
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5672
+        published: "15672"
+        protocol: tcp
+      - mode: ingress
+        target: 15672
+        published: "15673"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: rabbitmq_eventos_data
+        target: /var/lib/rabbitmq
+        volume: {}
+networks:
+  default:
+    name: infra_default
+volumes:
+  rabbitmq_eventos_data:
+    name: infra_rabbitmq_eventos_data
