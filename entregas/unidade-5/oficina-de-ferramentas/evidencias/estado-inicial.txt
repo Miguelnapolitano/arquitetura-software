@@ -1,0 +1,5 @@
+=== filas no estado inicial ===
+[]
+
+=== exchange hospital.events no estado inicial ===
+Object Not Found (ainda não declarada)
