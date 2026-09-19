@@ -1,0 +1,16 @@
+NAME                                READY   STATUS    RESTARTS   AGE
+pod/hospital-api-57568c78f9-7hqnz   1/1     Running   0          63s
+pod/hospital-api-57568c78f9-kgqlk   1/1     Running   0          63s
+
+NAME                   TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+service/hospital-api   NodePort   10.96.84.252   <none>        8000:30080/TCP   63s
+
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/hospital-api   2/2     2            2           63s
+
+NAME                                      DESIRED   CURRENT   READY   AGE
+replicaset.apps/hospital-api-55b5b865cf   0         0         0       49s
+replicaset.apps/hospital-api-57568c78f9   2         2         2       63s
+
+NAME                                               REFERENCE                 TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/hospital-api   Deployment/hospital-api   cpu: <unknown>/70%   2         5         2          63s

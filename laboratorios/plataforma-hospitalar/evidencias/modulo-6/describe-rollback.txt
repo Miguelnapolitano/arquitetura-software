@@ -1,0 +1,53 @@
+Name:                   hospital-api
+Namespace:              hospital
+CreationTimestamp:      Sat, 19 Sep 2026 11:05:54 -0300
+Labels:                 app=hospital-api
+Annotations:            deployment.kubernetes.io/revision: 2
+Selector:               app=hospital-api
+Replicas:               2 desired | 1 updated | 3 total | 2 available | 1 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  0 max unavailable, 1 max surge
+Pod Template:
+  Labels:  app=hospital-api
+  Containers:
+   hospital-api:
+    Image:      hospital-api:imagem-propositalmente-ausente
+    Port:       8000/TCP
+    Host Port:  0/TCP
+    Command:
+      python
+      -m
+      uvicorn
+      hospital.api.main:app
+      --host
+      0.0.0.0
+      --port
+      8000
+    Limits:
+      cpu:     250m
+      memory:  256Mi
+    Requests:
+      cpu:      100m
+      memory:   128Mi
+    Liveness:   http-get http://:http/health/live delay=5s timeout=1s period=5s #success=1 #failure=3
+    Readiness:  http-get http://:http/health/ready delay=2s timeout=1s period=3s #success=1 #failure=3
+    Environment Variables from:
+      hospital-api-config  ConfigMap  Optional: false
+    Environment:           <none>
+    Mounts:                <none>
+  Volumes:                 <none>
+  Node-Selectors:          <none>
+  Tolerations:             <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    ReplicaSetUpdated
+OldReplicaSets:  hospital-api-57568c78f9 (2/2 replicas created)
+NewReplicaSet:   hospital-api-55b5b865cf (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  37s   deployment-controller  Scaled up replica set hospital-api-57568c78f9 from 0 to 2
+  Normal  ScalingReplicaSet  23s   deployment-controller  Scaled up replica set hospital-api-55b5b865cf from 0 to 1

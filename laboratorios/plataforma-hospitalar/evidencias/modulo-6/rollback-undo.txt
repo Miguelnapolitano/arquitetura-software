@@ -1,0 +1,11 @@
+=== kubectl rollout undo ===
+deployment.apps/hospital-api rolled back
+
+=== kubectl rollout status (pós-undo) ===
+deployment "hospital-api" successfully rolled out
+
+=== kubectl get pods ===
+NAME                            READY   STATUS        RESTARTS   AGE   IP           NODE                           NOMINATED NODE   READINESS GATES
+hospital-api-55b5b865cf-w6x6n   0/1     Terminating   0          35s   10.244.0.7   hospital-local-control-plane   <none>           <none>
+hospital-api-57568c78f9-7hqnz   1/1     Running       0          49s   10.244.0.5   hospital-local-control-plane   <none>           <none>
+hospital-api-57568c78f9-kgqlk   1/1     Running       0          49s   10.244.0.6   hospital-local-control-plane   <none>           <none>

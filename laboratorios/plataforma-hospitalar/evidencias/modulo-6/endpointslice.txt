@@ -1,0 +1,2 @@
+NAME                 ADDRESSTYPE   PORTS   ENDPOINTS               AGE
+hospital-api-7l88x   IPv4          8000    10.244.0.5,10.244.0.6   11s

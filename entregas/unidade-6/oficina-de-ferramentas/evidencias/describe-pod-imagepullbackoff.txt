@@ -1,0 +1,74 @@
+Name:             hospital-api-55b5b865cf-w6x6n
+Namespace:        hospital
+Priority:         0
+Service Account:  default
+Node:             hospital-local-control-plane/172.20.0.2
+Start Time:       Sat, 19 Sep 2026 11:06:08 -0300
+Labels:           app=hospital-api
+                  pod-template-hash=55b5b865cf
+Annotations:      <none>
+Status:           Pending
+IP:               10.244.0.7
+IPs:
+  IP:           10.244.0.7
+Controlled By:  ReplicaSet/hospital-api-55b5b865cf
+Containers:
+  hospital-api:
+    Container ID:  
+    Image:         hospital-api:imagem-propositalmente-ausente
+    Image ID:      
+    Port:          8000/TCP
+    Host Port:     0/TCP
+    Command:
+      python
+      -m
+      uvicorn
+      hospital.api.main:app
+      --host
+      0.0.0.0
+      --port
+      8000
+    State:          Waiting
+      Reason:       ErrImagePull
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     250m
+      memory:  256Mi
+    Requests:
+      cpu:      100m
+      memory:   128Mi
+    Liveness:   http-get http://:http/health/live delay=5s timeout=1s period=5s #success=1 #failure=3
+    Readiness:  http-get http://:http/health/ready delay=2s timeout=1s period=3s #success=1 #failure=3
+    Environment Variables from:
+      hospital-api-config  ConfigMap  Optional: false
+    Environment:           <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9tbjn (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-9tbjn:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  32s                default-scheduler  Successfully assigned hospital/hospital-api-55b5b865cf-w6x6n to hospital-local-control-plane
+  Normal   Pulling    15s (x2 over 32s)  kubelet            Pulling image "hospital-api:imagem-propositalmente-ausente"
+  Warning  Failed     14s (x2 over 31s)  kubelet            Failed to pull image "hospital-api:imagem-propositalmente-ausente": failed to pull and unpack image "docker.io/library/hospital-api:imagem-propositalmente-ausente": failed to resolve reference "docker.io/library/hospital-api:imagem-propositalmente-ausente": pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+  Warning  Failed     14s (x2 over 31s)  kubelet            Error: ErrImagePull
+  Normal   BackOff    0s (x2 over 30s)   kubelet            Back-off pulling image "hospital-api:imagem-propositalmente-ausente"
+  Warning  Failed     0s (x2 over 30s)   kubelet            Error: ImagePullBackOff

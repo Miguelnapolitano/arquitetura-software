@@ -1,0 +1,2 @@
+NAME           REFERENCE                 TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+hospital-api   Deployment/hospital-api   cpu: <unknown>/70%   2         5         2          60s

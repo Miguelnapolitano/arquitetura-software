@@ -1,0 +1,8 @@
+=== kubectl apply -f infra/k8s/namespace.yaml ===
+namespace/hospital created
+
+=== kubectl apply (4 namespaced) ===
+configmap/hospital-api-config created
+deployment.apps/hospital-api created
+service/hospital-api created
+horizontalpodautoscaler.autoscaling/hospital-api created

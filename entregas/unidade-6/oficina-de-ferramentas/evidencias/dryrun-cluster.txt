@@ -1,0 +1,8 @@
+=== kubectl apply --dry-run=client -f infra/k8s/namespace.yaml (agora com cluster) ===
+namespace/hospital created (dry run)
+
+=== kubectl apply --dry-run=client -f infra/k8s/ (4 namespaced) ===
+configmap/hospital-api-config created (dry run)
+deployment.apps/hospital-api created (dry run)
+service/hospital-api created (dry run)
+horizontalpodautoscaler.autoscaling/hospital-api created (dry run)

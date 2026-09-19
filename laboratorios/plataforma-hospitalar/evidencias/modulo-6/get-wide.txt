@@ -1,0 +1,12 @@
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS     IMAGES               SELECTOR
+deployment.apps/hospital-api   2/2     2            2           7s    hospital-api   hospital-api:1.0.0   app=hospital-api
+
+NAME                                READY   STATUS    RESTARTS   AGE   IP           NODE                           NOMINATED NODE   READINESS GATES
+pod/hospital-api-57568c78f9-7hqnz   1/1     Running   0          7s    10.244.0.5   hospital-local-control-plane   <none>           <none>
+pod/hospital-api-57568c78f9-kgqlk   1/1     Running   0          7s    10.244.0.6   hospital-local-control-plane   <none>           <none>
+
+NAME                   TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE   SELECTOR
+service/hospital-api   NodePort   10.96.84.252   <none>        8000:30080/TCP   7s    app=hospital-api
+
+NAME                                               REFERENCE                 TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/hospital-api   Deployment/hospital-api   cpu: <unknown>/70%   2         5         0          7s
