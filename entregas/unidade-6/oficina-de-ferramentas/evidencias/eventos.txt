@@ -1,0 +1,25 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                 MESSAGE
+62s         Normal    SuccessfulCreate               replicaset/hospital-api-57568c78f9     Created pod: hospital-api-57568c78f9-kgqlk
+62s         Normal    ScalingReplicaSet              deployment/hospital-api                Scaled up replica set hospital-api-57568c78f9 from 0 to 2
+62s         Normal    SuccessfulCreate               replicaset/hospital-api-57568c78f9     Created pod: hospital-api-57568c78f9-7hqnz
+62s         Normal    Scheduled                      pod/hospital-api-57568c78f9-7hqnz      Successfully assigned hospital/hospital-api-57568c78f9-7hqnz to hospital-local-control-plane
+62s         Normal    Scheduled                      pod/hospital-api-57568c78f9-kgqlk      Successfully assigned hospital/hospital-api-57568c78f9-kgqlk to hospital-local-control-plane
+61s         Normal    Created                        pod/hospital-api-57568c78f9-kgqlk      Created container: hospital-api
+61s         Normal    Created                        pod/hospital-api-57568c78f9-7hqnz      Created container: hospital-api
+61s         Normal    Started                        pod/hospital-api-57568c78f9-7hqnz      Started container hospital-api
+61s         Normal    Started                        pod/hospital-api-57568c78f9-kgqlk      Started container hospital-api
+61s         Normal    Pulled                         pod/hospital-api-57568c78f9-7hqnz      Container image "hospital-api:1.0.0" already present on machine
+61s         Normal    Pulled                         pod/hospital-api-57568c78f9-kgqlk      Container image "hospital-api:1.0.0" already present on machine
+58s         Warning   Unhealthy                      pod/hospital-api-57568c78f9-kgqlk      Readiness probe failed: Get "http://10.244.0.6:8000/health/ready": dial tcp 10.244.0.6:8000: connect: connection refused
+48s         Normal    SuccessfulCreate               replicaset/hospital-api-55b5b865cf     Created pod: hospital-api-55b5b865cf-w6x6n
+48s         Normal    Scheduled                      pod/hospital-api-55b5b865cf-w6x6n      Successfully assigned hospital/hospital-api-55b5b865cf-w6x6n to hospital-local-control-plane
+48s         Normal    ScalingReplicaSet              deployment/hospital-api                Scaled up replica set hospital-api-55b5b865cf from 0 to 1
+31s         Normal    Pulling                        pod/hospital-api-55b5b865cf-w6x6n      Pulling image "hospital-api:imagem-propositalmente-ausente"
+30s         Warning   Failed                         pod/hospital-api-55b5b865cf-w6x6n      Error: ErrImagePull
+30s         Warning   Failed                         pod/hospital-api-55b5b865cf-w6x6n      Failed to pull image "hospital-api:imagem-propositalmente-ausente": failed to pull and unpack image "docker.io/library/hospital-api:imagem-propositalmente-ausente": failed to resolve reference "docker.io/library/hospital-api:imagem-propositalmente-ausente": pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+16s         Warning   Failed                         pod/hospital-api-55b5b865cf-w6x6n      Error: ImagePullBackOff
+16s         Normal    BackOff                        pod/hospital-api-55b5b865cf-w6x6n      Back-off pulling image "hospital-api:imagem-propositalmente-ausente"
+13s         Normal    ScalingReplicaSet              deployment/hospital-api                Scaled down replica set hospital-api-55b5b865cf from 1 to 0
+13s         Normal    SuccessfulDelete               replicaset/hospital-api-55b5b865cf     Deleted pod: hospital-api-55b5b865cf-w6x6n
+2s          Warning   FailedGetResourceMetric        horizontalpodautoscaler/hospital-api   failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)
+2s          Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/hospital-api   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)

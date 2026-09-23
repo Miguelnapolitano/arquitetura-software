@@ -1,0 +1,47 @@
+=== docker version ===
+Client: Docker Engine - Community
+ Version:           29.8.1
+ API version:       1.56
+ Go version:        go1.26.8
+ Git commit:        4a63305
+ Built:             Tue Sep 15 16:25:26 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          29.8.1
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.26.8
+  Git commit:       464cd50
+  Built:            Tue Sep 15 16:25:26 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.3.5
+  GitCommit:        1294c24a7da8e5a793ed378161673abe94118892
+ runc:
+  Version:          1.5.1
+  GitCommit:        v1.5.1-0-g8f2685a4
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+=== docker compose version ===
+Docker Compose version v5.5.1
+
+=== kind version ===
+kind v0.27.0 go1.23.6 linux/amd64
+
+=== kubectl version --client ===
+Client Version: v1.31.4
+Kustomize Version: v5.4.2
+
+=== python (.venv) ===
+Python 3.12.12
+
+=== kubectl config current-context (antes do cluster) ===
+error: current-context is not set
+
+=== kind get clusters (antes) ===
+No kind clusters found.

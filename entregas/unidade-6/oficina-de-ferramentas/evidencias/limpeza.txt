@@ -1,0 +1,13 @@
+=== kind delete cluster --name hospital-local ===
+Deleting cluster "hospital-local" ...
+Deleted nodes: ["hospital-local-control-plane"]
+
+=== kind get clusters (depois) ===
+No kind clusters found.
+
+=== kubectl config current-context (depois) ===
+error: current-context is not set
+
+=== docker ps (recursos residuais) ===
+portal_stream-aws-1	minio/minio	Up 47 minutes
+konga	pantsel/konga:latest	Up About a minute
